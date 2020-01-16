@@ -11,11 +11,11 @@
 FROM mongo:3.4
 
 # Get download dump archives
-ADD http://ci3.castalia.camp/dl/M30/KB_CROSSMINER.gz /home
-ADD http://ci3.castalia.camp/dl/M30/MeasurePlatform.20190522.gz /home
-ADD http://ci3.castalia.camp/dl/M30/microprofile.20190522.gz /home
-ADD http://ci3.castalia.camp/dl/M30/scava-analysis.20190522.gz /home
-ADD http://ci3.castalia.camp/dl/M30/scava.20190522.gz /home
+ADD http://ci4.castalia.camp/dl/M30/KB_CROSSMINER.gz /home
+ADD http://ci4.castalia.camp/dl/M30/MeasurePlatform.20190522.gz /home
+ADD http://ci4.castalia.camp/dl/M30/microprofile.20190522.gz /home
+ADD http://ci4.castalia.camp/dl/M30/scava-analysis.20190522.gz /home
+ADD http://ci4.castalia.camp/dl/M30/scava.20190522.gz /home
 
 
 WORKDIR home

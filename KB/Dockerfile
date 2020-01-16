@@ -25,7 +25,7 @@ RUN mkdir localM3models \
 &&  mkdir deltas
 
 # COPY Indexes.tar.gz /home/root/
-RUN  wget  http://ci3.castalia.camp/dl/Indexes.tar.gz \
+RUN  wget  http://ci4.castalia.camp/dl/Indexes.tar.gz \
 &&   tar -xzf /home/root/Indexes.tar.gz \
 &&   rm /home/root/Indexes.tar.gz
 
