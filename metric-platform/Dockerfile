@@ -49,6 +49,8 @@ RUN wget http://ci5.castalia.camp:8080/job/scava-metric-platform/job/$BRANCH/las
 COPY prop.properties /ossmeter/prop.properties
 COPY wait-for-it.sh /ossmeter/wait-for-it.sh
 
+RUN chmod +x wait-for-it.sh
+
 WORKDIR plugins
 
 COPY META-INF META-INF
