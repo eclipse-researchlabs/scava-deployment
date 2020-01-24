@@ -7,8 +7,8 @@ RUN apt-get update \
 subversion
 
 ## records the branch and commit version associated to the software
-RUN echo "$BRANCH-$(git ls-remote https://github.com/crossminer/scava.git $BRANCH | awk '{ print $1}')" > version \
-&&  svn export https://github.com/crossminer/scava/branches/$BRANCH/administration/scava-administration/ \
+RUN echo "$BRANCH-$(git ls-remote https://github.com/eclipse-researchlabs/scava.git $BRANCH | awk '{ print $1}')" > version \
+&&  svn export https://github.com/eclipse-researchlabs/scava/branches/$BRANCH/administration/scava-administration/ \
 &&  cd scava-administration \
 &&  npm update \
 &&  npm install \
@@ -17,7 +17,7 @@ RUN echo "$BRANCH-$(git ls-remote https://github.com/crossminer/scava.git $BRANC
 &&  ng build --prod
 
 FROM nginx:1.14-alpine
-LABEL description="Image with CROSSMINER Adminstration Web Interface"
+LABEL description="Image with CROSSMINER Administration Web Interface"
 
 ENV API_GATEWAY_VAR=http://localhost:8086
 
